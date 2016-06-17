@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Hello React</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
   <body>
     <div id="container"></div>
@@ -16,7 +17,7 @@
         }
       });
 
-      var TimerExample = React.createClass({
+      var Timer = React.createClass({
 
           getInitialState: function(){
 
@@ -61,8 +62,8 @@
               // only the changed parts, which contain the seconds variable.
 
               return (
-                      <div>
-                        <h1>Hello React!</h1>
+                      <div className="text-center">
+                        <Greeting />
                         <p>This page was opened <b>{seconds} seconds</b> ago.</p>
                       </div>
                      );
@@ -71,7 +72,7 @@
 
 
       ReactDOM.render(
-          <TimerExample start={Date.now()} />,
+          <Timer start={Date.now()} />,
           document.getElementById('container')
       );
 
